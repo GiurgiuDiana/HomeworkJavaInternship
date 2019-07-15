@@ -1,2 +1,2 @@
-# HomeworkJavaInternship
+# Homework Java Internship
 This repository is for the Internship 2019 Evozon
