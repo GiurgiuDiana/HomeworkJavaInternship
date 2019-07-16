@@ -1,4 +1,7 @@
 import java.awt.desktop.SystemEventListener;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Scanner;
 
 public class Main {
@@ -219,6 +222,123 @@ public class Main {
         System.out.println("media nr divizibile cu 7 din 111 pana la 8899 este :"+ operations.mediaDiv7(25,59));
         operations.fibonacci(0,1,2);
         operations.CozaLozaWoza();
+
+        int[] array= operations.fillInArray();
+        System.out.println("check the array ");
+       for(int i: array)
+       {
+           System.out.print(" "+i);
+       }
+
+        int[] array2= operations.fillEvenArray(new int[49]);
+        System.out.println("check the array ");
+        for(int i: array2)
+        {
+            System.out.print(" "+i);
+        }
+
+        System.out.println("media arrayului "+ operations.mediaArray(array2));
+        System.out.println("media arrayului "+ operations.mediaArray(array));
+
+        String[] arrayString= {"Nume","Prenume","AltNume","Unu","Doi","Trei","Patru","Cinci"};
+        System.out.println("exista substringul "+ operations.checkString(arrayString,"Zero"));
+        System.out.println("exista numarul in array "+ operations.indexOfString(array2,6));
+        operations.printString();
+        int[] array3= operations.returnArray(array2,6);
+        System.out.println("Deleteing a number from array");
+        for(int i: array3)
+        {
+            System.out.print(" "+i);
+        }
+        int[] array4={1,99,3,462,23,3,56,3,57,7,3,6,8,3};
+        System.out.println("  ");
+        System.out.println("secoond smalleste number in the array  "+ operations.returnSecondSmallestNumber(array4));
+        int[] array5=new int[array4.length];
+        operations.copyArray(array4,array5);
+        for(int i: array5)
+        {
+            System.out.print(" "+i);
+        }
+        System.out.println(" ");
+        ArrayList<Integer>list= new ArrayList<>();
+        list.add(3);
+        list.add(8);
+        list.add(7);
+        list.add(2);
+        list.add(1);
+        operations.printList(list);
+        operations.addAtFront(list,7);
+        operations.printListAndIndex(list);
+        operations.printInvers(list);
+        ArrayList<String>arr= new ArrayList<String>();
+        arr.add("unu");
+        arr.add("doi");
+        arr.add("trei");
+        arr.add("patru");
+        arr.add("cinci");
+
+        operations.addingAStringAtSpecificPosition(arr,2,"Opt");
+        operations.addAtFront(arr,"Listaaa");
+        operations.printInvers(arr);
+        System.out.println("Maximul din lista este "+operations.returnGreatest(list));
+       // int x=2;
+       // System.out.println( x+=x+=x++ + ++x);
+        HashMap<Integer,String> hmap= new HashMap<>();
+        hmap.put(0,"Nume");
+        hmap.put(1,"Prenume");
+        hmap.put(2,"Varsta");
+        hmap.put(3,"Telefon");
+        hmap.put(4,"Adresa");
+        hmap.put(5,"FAX");
+        operations.addElementToHashMap(hmap,"Element Final");
+        operations.printElemetsFromHashMap(hmap);
+        System.out.println("Number of elemets in a hashmap "+ operations.noElementsOfHashMap(hmap));
+        System.out.println("Check is hash map is empty  "+ operations.checkEmptyHashMap(hmap));
+        HashSet<Integer> set1= new HashSet<Integer>() ;
+        HashSet<Integer> set2= new HashSet<Integer>() ;
+        set1.add(1);
+        set1.add(2);
+        set1.add(3);
+        set1.add(4);
+        set1.add(7);
+        set1.add(9);
+        operations.cloneHashSet(set1,set2);
+        System.out.println(set2);
+        set2.add(10);
+
+        System.out.println("cele 2 seturi sunt : "+operations.compareHashSet(set1,set2));
+        System.out.print(" removing elemets from: "+ set2 +"means " );
+        operations.removeElemets(set2);
+        System.out.print(set2);
+        ////////Homework - Strings
+        HomeworkStrings strg= new HomeworkStrings();
+        //1. Create an empty StringBuffer
+        StringBuffer bff= new StringBuffer();
+        //2.Append “blessings”
+        bff.append("Blessings");
+        //3.Insert “Good ” in the begging
+        bff.insert(0,"Good");
+        //4. Delete the first o
+        bff.deleteCharAt(1);
+        //5. Append “ be with you”
+        bff.append("be with you");
+        //6. Set length to 3
+        bff.setLength(3);
+        //7.Create a printDetails method, that takes a StringBuilder parameter, and prints the content, length and capacity of the StringBuilder, all on a new line
+        System.out.println(" ");
+        StringBuilder str= new StringBuilder(50);
+       str.append("Blessing");
+       str.append("Some");
+       str.append("words");
+       str.append("NoOne");
+       strg.printDetails(str);
+        String strin= new String("NoOne's list");
+        System.out.println("The index of the first o from  "+strin+" is "+ strin.indexOf("o"));
+        System.out.println("The character at the index 4 from  "+strin+" is "+ strin.charAt(4));
+
+
+
+
     }
 
 
