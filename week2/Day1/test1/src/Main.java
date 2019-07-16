@@ -335,11 +335,36 @@ public class Main {
         String strin= new String("NoOne's list");
         System.out.println("The index of the first o from  "+strin+" is "+ strin.indexOf("o"));
         System.out.println("The character at the index 4 from  "+strin+" is "+ strin.charAt(4));
-
-
-
-
+        String s1="UnuDoi Trei";
+        String s2="UnuDoi Trei";
+        System.out.println(" Sunt cele 2 stringuri egale dpdv lexicografic? "+ strg.compare2Strings(s1,s2));
+        String s3="unudoi trei";
+        String s4="unuDoi trEI";
+        System.out.println("Sunt s3 si s4 egale dpdv  lexicographically, ignoring case differences? "+strg.compare2StringsIgnoringCasses(s3,s4));
+        System.out.println(s3.concat(s4));
+        strg.concat2Strings(s1,s2);
+        String s5="nudo";
+        System.out.println(strg.testSpecificChars(s1,s5));
+        System.out.println("Uppercase "+ strg.convertUpperCase("unuDoi"));
+        System.out.println("Lowercase "+ strg.convertLowercase("UNUDoi"));
+        System.out.println("remove letters b and ac  "+ strg.removeSomeLetters("bacBobocBelcAclowse"));
+        System.out.println("dividing " );
+        String[] st=strg.dividingString("alabal",6);
+        for(String s: st)
+        {
+            System.out.print("  "+s+"  ");
+        }
+        System.out.println();
+        System.out.println("phone number0 "+strg.designPN("0740258963"));
+            /////////JAVA TRY CATCH
+        Read rs= new Read();
+        int[] rsa=rs.arrayNr();
+        for(int i=0; i<rsa.length; i++)
+        {
+            System.out.println(rsa[i]);
+        }
     }
+
 
 
 }
