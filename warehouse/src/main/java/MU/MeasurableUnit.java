@@ -16,4 +16,11 @@ public abstract class MeasurableUnit {
     public void setUnitName(String unitName) {
         this.unitName = unitName;
     }
+
+    @Override
+    public String toString() {
+        return "MeasurableUnit{" +
+                "unitName='" + unitName + '\'' +
+                '}';
+    }
 }

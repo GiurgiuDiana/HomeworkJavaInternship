@@ -2,6 +2,7 @@ package Products;
 
 import MU.MeasurableUnit;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Product {
@@ -9,11 +10,11 @@ public class Product {
 
     private String name;
     private int pricePerUnit;
-    private Date expirationDate;
-    private Date creationDate;
+    private LocalDate expirationDate;
+    private LocalDate creationDate;
     private MeasurableUnit mu;
 
-    public Product(String name, int pricePerUnit, Date expirationDate, Date creationDate, MeasurableUnit mu) {
+    public Product(String name, int pricePerUnit, LocalDate expirationDate, LocalDate creationDate, MeasurableUnit mu) {
         this.name = name;
         this.pricePerUnit = pricePerUnit;
         this.expirationDate = expirationDate;
@@ -29,11 +30,11 @@ public class Product {
         return pricePerUnit;
     }
 
-    public Date getExpirationDate() {
+    public LocalDate getExpirationDate() {
         return expirationDate;
     }
 
-    public Date getCreationDate() {
+    public LocalDate getCreationDate() {
         return creationDate;
     }
 
@@ -49,11 +50,11 @@ public class Product {
         this.pricePerUnit = pricePerUnit;
     }
 
-    public void setExpirationDate(Date expirationDate) {
+    public void setExpirationDate(LocalDate expirationDate) {
         this.expirationDate = expirationDate;
     }
 
-    public void setCreationDate(Date creationDate) {
+    public void setCreationDate(LocalDate creationDate) {
         this.creationDate = creationDate;
     }
 
@@ -61,5 +62,14 @@ public class Product {
         this.mu = mu;
     }
 
-
+    @Override
+    public String toString() {
+        return "Product{" +
+                "name='" + name + '\'' +
+                ", pricePerUnit=" + pricePerUnit +
+                ", expirationDate=" + expirationDate +
+                ", creationDate=" + creationDate +
+                ", mu=" + mu +
+                '}';
+    }
 }
